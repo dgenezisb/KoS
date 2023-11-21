@@ -2,23 +2,18 @@
 default_target: all
 .PHONY : default_target
 
-# Allow only one "make -f Makefile2" at a time, but pass parallelism.
+
 .NOTPARALLEL:
 .SUFFIXES:
 
-# Disable VCS-based implicit rules.
 % : %,v
 
-# Disable VCS-based implicit rules.
 % : RCS/%
 
-# Disable VCS-based implicit rules.
 % : RCS/%,v
 
-# Disable VCS-based implicit rules.
 % : SCCS/s.%
 
-# Disable VCS-based implicit rules.
 % : s.%
 
 .SUFFIXES: .hpux_make_needs_suffix_list
